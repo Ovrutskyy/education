@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .container {
+            background: black;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0px;
+            justify-content: center;
+            border: 3px solid red;
+        }
+    
+        a {
+            box-sizing: border-box;
+            width: calc(33.3% - 30px);
+            align-items: center;
+            padding: 5px;
+            display: inline-block;
+            margin: 15px;
+            color: white;
+            text-decoration: none;
+            font-size: 30px;
+        }
+        .item{
+            padding: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .image-box {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .select {
+            background: dimgray;
+        }
+        .test{
+            height: 50px;
+            width: 100px;
+            background: red;
+            padding: 60px;
+        }
+    </style>
+    <div class="container">
+        <div class="test">
+
+        </div>
+        <div class="item select">
+            <a href="#">Инвесторам</a>
+        </div>
+        <div class="item">
+            <a href="#">Реклама</a>
+        </div>
+        <div class="item">
+            <a href="#">Вакансия</a>
+
+        </div>
+    </div>
+</body>
+
+</html>

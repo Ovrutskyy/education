@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приоритетность в CSS</title>
+    <!-- https://webref.ru/course/css-basics/priority -->
+</head>
+<body>
+    
+    <style>
+        .paragraph{
+            color: green;
+            background: aqua;
+        }
+
+        .paragraph{
+            background: blue;
+        }
+        
+        .message{
+            background: gold;
+        }
+
+    </style>
+    <!-- Порядок имен классов в атрибуте не влияет на приоритетность -->
+    <!-- У одного элемента может быть много имен через класс -->
+    <p class="paragraph message">Lorem, ipsum dolor.</p>
+    <p class="message paragraph ">Lorem, ipsum dolor.</p>
+
+</body>
+</html>

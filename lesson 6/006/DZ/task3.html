@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отступы для строчно-блочных элементов</title>
+</head>
+
+<body>
+    <style>
+        body *{
+            box-sizing: border-box;
+        }
+        .nav {
+            background-color: grey;
+            width: 100%;
+            flex-direction: row;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 70px;
+            padding-right: 120px;
+        }
+        .cta{
+           justify-content: center;
+           display: flex;
+           align-items: center;
+           flex-direction: column;
+          }
+          .cta-p{
+           justify-content: center;
+           display: flex;
+           align-items: center;
+           flex-direction: row;
+          }
+        .consult {
+            background-color: orange;
+            padding: 10px;
+            border-radius: 20px;
+            color: white;
+            align-items: center;
+            border: none;
+        }
+        /* 02.09.22 */
+        .nav-items a{
+        margin-right: 30px; 
+        text-decoration: none; 
+        color: white;
+        }
+    
+        .nav-items a img{
+        margin-right: 5px;
+        }
+
+      .cta-t{
+            color: orange;
+            font-size: 40px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            margin-top: 30px;
+      }
+      .cta-ta{
+            width: 340px;
+            font-size: 15px;
+            text-align: center;
+      }
+      .cta-buttom{            
+            background-color: orange;
+            border-radius: 20px;
+            color: white;
+            text-align: center;
+            width: 200px;
+            padding: 10px;
+            border: none;
+            margin-top: 20px;
+            margin-right: 30px;
+            flex-direction: row;
+      }
+    </style>
+    <div class="nav">
+
+        <div class="nav-logo">
+            <img src="logo.png" alt=".images">
+        </div>
+
+        <div class="nav-items">
+            <a href="#">
+                <img src="phone icon.png" alt=".images">
+                0 800 337 146
+            </a>
+            <a href="#">
+                <img src="Skype icon.png" alt=".images">
+                support_cbs
+            </a>
+            <a href="#">
+                <img src="telegram icon.png" alt=".images"> 
+                cbs_support
+            </a>
+            <button class="consult">
+                Заказать консультацию
+            </button>
+        </div>
+    </div>
+
+    <div class="cta">
+        <div class="cta-t">
+            <span> Курсы программирования</span>
+         </div>
+        <div class="cta-ta">Комплексное программы обучение</div>
+    </div>
+    <div class="cta-p">
+        <button class="cta-buttom">Заказать консультацию</button>
+        <button class="cta-buttom">Пробный урок</button>    
+    </div>
+    
+</body>
+
+</html>

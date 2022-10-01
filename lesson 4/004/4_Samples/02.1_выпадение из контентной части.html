@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Выпадение из контентной части элемента</title>
+</head>
+<body>
+    <style>
+        /* % (значение в процентах) 
+            определение размера, отталкиваясь от
+            доступного пространства 
+        */
+        .parent{
+            background: yellow;
+            /* Поменяйте значение ширины */
+            width: 200px;
+            /* width: 50%; */
+            height: 200px;
+        }
+        .child{
+            background: lightgreen;
+            height: 100px;
+            /* width: 250px; */
+            /* width: 125%; */
+        }
+    </style>
+
+    <div class="parent">
+        Родитель
+        <div class="child">
+            Ребенок
+        </div>
+    </div>
+</body>
+</html>

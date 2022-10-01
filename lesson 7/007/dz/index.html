@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        body * {
+            box-sizing: border-box;
+        }
+
+        .title {
+            display: flex;
+            justify-content: flex-start;
+            font-size: 50px;
+            font-weight: 700;
+            font-family: 'Gill Sans', 'Gill Sans MT';
+            color: red;
+        }
+        .links-title {
+            color: red;
+            font-size: 30px;
+            margin-left: 30px;
+            margin-top: 30px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            border-bottom: 2px solid rgb(217, 33, 33);
+            padding-bottom: 10px;
+            width: 500px;
+            display: flex;
+            justify-content: flex-start;
+            text-transform: uppercase;
+        }
+        .links-item {
+            color: grey;
+            font-size: 20px;
+            margin-left: 30px;
+            padding: 15px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            border-bottom: 1px solid grey;
+            width: 500px;
+            display: flex;
+            text-transform: uppercase;
+            display: flex;
+            justify-content: space-between;
+        }
+        .links-item,
+        .links-item * {
+            transition: 1.2s;
+            transition-timing-function:cubic-bezier(.29, 1.01, 1, -0.68);
+        }
+        .links-contaiter {
+            background-color: blueviolet;
+        }
+        .links-item:hover {
+            padding-left: 30px;
+
+        }
+        .links-item:hover a {
+            color: rgb(213, 31, 31);
+            /* background-position: right 4px top 214px;
+            transform: translateX(30px);
+            text-decoration: none;*/
+        }
+        .links-item:hover img {
+            /*            background-position: right 4px top 214px;
+            transform: translateX(30px);
+            text-decoration: none;*/
+            opacity: 1;
+        }
+        a {
+            text-decoration: none;
+            color: grey;
+        }
+        .links {
+            color: burlywood;
+        }
+
+        img {
+            width: 20px;
+            height: 20px;
+            opacity: 0;
+        }
+        .news-container{
+            color: black;
+            margin-left: 0px;
+            font-size: 20px;
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+        }
+        .title1{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .news-items{
+           color: black;
+           display: flex;
+           border-top: 3px solid grey;
+           margin: 25px;
+           
+        }
+        .data1{
+            display: flex;
+            box-sizing: border-box;
+            background-color: white;
+            width: 50px;
+            height: 70px;
+            box-shadow: inset -5px 5px 4px 0px grey;
+            color: rgb(92, 85, 85);
+            padding: 10px;
+            text-transform: capitalize;
+        }
+
+        .info{  display: flex;
+            flex-direction: column;
+            width: 520px;
+            height: 70px;
+            padding: 10px;
+           }
+
+            .info1{  display: flex;
+            box-sizing: border-box;
+            background-color: white;
+            width: 550px;
+            margin: 0;
+            flex-direction: column;
+            text-transform: capitalize;
+        }
+            .info2{  
+            display: flex;
+            width: 200px;
+            padding-top: 10px;
+            flex-direction: column;
+        }
+        .more{
+            color: grey;
+            font-size: 15px;
+            margin: 0%;
+        }
+        .read{
+            color: red;
+            font-size: 15px;
+            padding-top: 5px;
+        }
+        .news-hole{
+            display: flex;
+            flex-direction: row;
+        }
+
+    </style>
+    <!-- 
+ПРАВИЛЬНО 
+
+<div class="title"> COME WORK WITH THE BEST.</div>
+
+div - блок с понятным классом про блок = links - 3 таких блока должно выйти
+    h2 - заголовок links-title
+    div - блок в котором будут эти элеметы со стрелочкой - links-container
+        div - animation элемент со стрелочкой - links-item
+            a 
+            img
+        div -  элемент со стрелочкой - links-item
+            a
+            img
+        div -  элемент со стрелочкой - links-item
+            a 
+            img
+
+
+НЕ ПРАВИЛЬНО
+
+body 
+
+    div - основной Заголовок
+
+    div - заголовок блока
+    div - элемент со стрелочкой
+    div - элемент со стрелочкой
+    div - элемент со стрелочкой
+
+    div - заголовок блока
+    div - элемент со стрелочкой
+    div - элемент со стрелочкой
+    div - элемент со стрелочкой
+
+    div - заголовок блока
+    div - элемент со стрелочкой
+    div - элемент со стрелочкой
+    div - элемент со стрелочкой
+
+
+
+ -->
+ <!-- 
+    <h1 class="title"> COME WORK WITH THE BEST.</h1>
+    <div class="links">
+        <h2 class="links-title"> ART</h2>
+        <div class="links-container ">
+            <div class="links-item">
+                <a href="#">ANIMATOR</a>
+                <img src="./arrow.svg" alt="icon">
+            </div>
+            <div class="links-item">
+                <a href="#">OUTSORCING ARTIST</a>
+                <img src="./arrow.svg" alt="icon">
+            </div>
+            <div class="links-item">
+                <a href="#">SENIOR CHARACHER ARTIST</a>
+                <img src="./arrow.svg" alt="icon">
+            </div>
+            <div class="links-item">
+                <a href="#">SENIOR CREATURE ARTIST</a>
+                <img src="./arrow.svg" alt="icon">
+            </div>
+            <div class="links-item">
+                <a href="#">VFX ARTIST</a>
+                <img src="./arrow.svg" alt="icon">
+            </div>
+        </div>
+    </div>
+    <div class="links">
+        <h2 class=" links-title">Cinematics</h2>
+        <div class="links-container">
+            <div class="links-item">
+                <a href="#">cinematics animator</a>
+                <img src="./arrow.svg" alt="icon">
+            </div>
+        </div>
+    </div>
+    <div class="links">
+        <h2 class=" links-title">DESIGN </h2>
+        <div class="links-container">
+            <div class="links-item">
+                <a href="#">gamedesigner-reward system</a>
+                <img src="./arrow.svg" alt="icon">
+            </div>
+            <div class="links-item">
+                <a href="#">senior acounting design</a>
+                <img src="./arrow.svg" alt="icon">
+            </div>
+            <div class="links-item">
+                <a href="#">senior system designer</a>
+                <img src="./arrow.svg" alt="icon">
+            </div>
+            <div class="links-item">
+                <a href="#">senior technical design</a>
+                <img src="./arrow.svg" alt="icon">
+            </div>
+        </div>
+    </div>
+    -->
+
+    <div class="news">
+       <h2 class="title1">NEWS</h2>
+        <div class="news-container">
+            <div class="news-items">
+                <div class="data1">06 sep</div>
+                   <div class="info">
+                     <h3 class="info1">
+                     <a href="#">Your draconic heart awakens with the dragon crest helm </a>
+                     </h3>
+                      <div class="info2">
+                            <p class="more"> More than a legend</p>
+                            <a class="read" href="#">Read more </a>
+                      </div>
+                    </div>
+            </div>
+
+            <div class="news-items">
+                <div class="data1">06 sep</div>
+                   <div class="info">
+                     <h3 class="info1">
+                     <a href="#">Livining Season 1 Return:"Tower of Nightmares" Arrives Next week </a>
+                     </h3>
+                      <div class="info2">
+                            <p class="more"> More than a legend</p>
+                            <a class="read" href="#">Read more </a>
+                      </div>
+                    </div>
+                  </div>
+
+            <div class="news-items">
+                <div class="data1">30 aug</div>
+                   <div class="info">
+                     <h3 class="info1">
+                     <a href="#">Energy flows back to You with Etherbound chestplate and Etherbound Legguard</a>
+                     </h3>
+                      <div class="info2">
+                            <p class="more"> More than a legend</p>
+                            <a class="read" href="#">Read more </a>
+                      </div>
+                    </div>
+                 </div>
+
+            <div class="news-items">
+                <div class="data1">30 aug</div>
+                   <div class="info">
+                     <h3 class="info1">
+                     <a href="#">The guild wars 2 art SHow:August 31</a>
+                     </h3>
+                      <div class="info2">
+                            <p class="more"> More than a legend</p>
+                            <a class="read" href="#">Read more </a>
+                      </div>
+                    </div>
+                 </div>
+
+            <div class="news-items">
+                <div class="data1">26 sep</div>
+                   <div class="info">
+                     <h3 class="info1">
+                     <a href="#">enter the Guild Wars 2 10th Anniversary Sweepstakes</a>
+                     </h3>
+                      <div class="info2">
+                            <p class="more"> More than a legend</p>
+                            <a class="read" href="#">Read more </a>
+                      </div>
+                    </div>
+                </div>
+       </div>
+
+    </div>
+
+
+</body>
+
+</html>
